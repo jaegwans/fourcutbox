@@ -1,7 +1,8 @@
-import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import type {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React from 'react';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {
   LoginScreen,
   MainScreen,
@@ -9,6 +10,7 @@ import {
   SavePhotoScreen,
   SettingsScreen,
 } from '../screens';
+import {colors} from '../theme/colors';
 
 export type RootStackParamList = {
   Login: undefined;
@@ -25,26 +27,67 @@ const Tab = createBottomTabNavigator();
 
 export const TabNavigator = () => {
   return (
-    <Tab.Navigator>
-      <Tab.Screen
-        name="Main"
-        component={MainScreen}
-        options={{title: '사진목록'}}
-      />
+    <Tab.Navigator
+      screenOptions={{
+        tabBarActiveTintColor: colors.tab.active,
+        tabBarInactiveTintColor: colors.tab.inactive,
+        headerShown: false,
+      }}>
       <Tab.Screen
         name="Map"
         component={MapScreen}
-        options={{title: '부스찾기'}}
+        options={{
+          title: '부스찾기',
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="map-marker-check-outline"
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Main"
+        component={MainScreen}
+        options={{
+          title: '사진목록',
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="image-multiple-outline"
+              size={size}
+              color={color}
+            />
+          ),
+        }}
       />
       <Tab.Screen
         name="SavePhoto"
         component={SavePhotoScreen}
-        options={{title: '사진저장'}}
+        options={{
+          title: '사진저장',
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="folder-upload-outline"
+              size={size}
+              color={color}
+            />
+          ),
+        }}
       />
       <Tab.Screen
         name="Settings"
         component={SettingsScreen}
-        options={{title: '설정'}}
+        options={{
+          title: '설정',
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="account-outline"
+              size={size}
+              color={color}
+            />
+          ),
+        }}
       />
     </Tab.Navigator>
   );
