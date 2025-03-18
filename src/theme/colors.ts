@@ -50,6 +50,12 @@ export const colors = {
     light: '#C6C6C8',
     dark: '#48484A',
   },
+
+  // Tab Navigation Colors
+  tab: {
+    active: '#000000',
+    inactive: '#999999',
+  },
 };
 
 export default colors;

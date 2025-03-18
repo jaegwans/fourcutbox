@@ -32,7 +32,13 @@
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>주변 네컷사진관을 찾기 위해 위치 정보가 필요합니다.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>주변 네컷사진관을 찾기 위해 위치 정보가 필요합니다.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>주변 네컷사진관을 찾기 위해 위치 정보가 필요합니다.</string>
+	<key>io.flutter.embedded_views_preview</key>
+	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>BootSplash</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -47,5 +53,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>MaterialCommunityIcons.ttf</string>
+	</array>
 </dict>
 </plist>
