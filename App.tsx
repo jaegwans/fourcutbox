@@ -3,6 +3,7 @@ import React, {useEffect} from 'react';
 import RNBootSplash from 'react-native-bootsplash';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {RootNavigator} from './src/navigation/navigation';
+import {StyleSheet} from 'react-native';
 
 function App(): JSX.Element {
   useEffect(() => {
@@ -23,5 +24,14 @@ function App(): JSX.Element {
     </SafeAreaProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  map: {
+    flex: 1,
+  },
+});
 
 export default App;

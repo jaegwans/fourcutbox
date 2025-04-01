@@ -34,20 +34,6 @@ export const TabNavigator = () => {
         headerShown: false,
       }}>
       <Tab.Screen
-        name="Map"
-        component={MapScreen}
-        options={{
-          title: '부스찾기',
-          tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons
-              name="map-marker-check-outline"
-              size={size}
-              color={color}
-            />
-          ),
-        }}
-      />
-      <Tab.Screen
         name="Main"
         component={MainScreen}
         options={{
@@ -55,6 +41,20 @@ export const TabNavigator = () => {
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons
               name="image-multiple-outline"
+              size={size}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Map"
+        component={MapScreen}
+        options={{
+          title: '부스찾기',
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons
+              name="map-marker-check-outline"
               size={size}
               color={color}
             />
